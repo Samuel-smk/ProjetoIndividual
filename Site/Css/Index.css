@@ -28,7 +28,7 @@ header .containerHeader {
     align-items: center;
 }
 header .containerHeader h1 {
-    color: black;
+    color: white;
     font-weight: 400;
     justify-content: flex-start;
     margin-left: 10px;
@@ -97,7 +97,7 @@ header .containerHeader .navbar .button .login{
 --------------------
 Banner */
 .banner {
-    background-image: url("https://img.freepik.com/fotos-gratis/bela-jovem-casal-desportivo-treinador-e-mulher-mostrando-musculos-e-treino-no-ginasio-durante-o-treino_496169-2686.jpg?w=1380&t=st=1667415517~exp=1667416117~hmac=abccc1e1f5424c5e379a07a5628746c3264defbef4d103ec85606b309bf87f2d");
+    background-image: url("../Img/Academia.jpg");
     background-size: 100%;
     height: 80vh;
     padding: 0px 0;
@@ -105,8 +105,10 @@ Banner */
 
 .banner .container {
     height: 350px;
+    display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
 
 .banner span {
@@ -114,5 +116,21 @@ Banner */
     color: #12a3f6;
     font-size: 30px;
     justify-content: center;
+    align-items: center;
+}
+
+/* 
+--------------------
+Blog */
+
+.areaBlog .container .blog{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.areaBlog .container .blog .artigo1 .artigos{
+    display: flex;
+    justify-content: space-;
     align-items: center;
 }
