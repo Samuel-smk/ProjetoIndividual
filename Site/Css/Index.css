@@ -28,7 +28,7 @@ header .containerHeader {
     align-items: center;
 }
 header .containerHeader h1 {
-    color: white;
+    color: black;
     font-weight: 400;
     justify-content: flex-start;
     margin-left: 10px;
@@ -78,7 +78,7 @@ header .containerHeader .navbar .button .login{
 }
 
 .login:hover{
-    background-color:#eee;
+    background-color:rgb(238, 238, 238);
     transition: 0.5s;
     cursor:pointer;
 }
@@ -99,8 +99,9 @@ Banner */
 .banner {
     background-image: url("../Img/Academia.jpg");
     background-size: 100%;
-    height: 80vh;
-    padding: 0px 0;
+    background-color: #eee;
+    height: 90vh;
+    padding: 200px 0;
 }
 
 .banner .container {
@@ -122,15 +123,82 @@ Banner */
 /* 
 --------------------
 Blog */
+.areaBlog{
+    padding: 50px;
+    background-color: #eee;
+}
 
-.areaBlog .container .blog{
+.areaBlog .blog{
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.areaBlog .container .blog .artigo1 .artigos{
+.artigos {
+    padding: 30px 0;
     display: flex;
-    justify-content: space-;
+    justify-content: center;
     align-items: center;
+    
+
+}
+.areaBlog .artigos ul{
+    margin-left: 30px;
+    list-style: none;
+}
+
+
+/* 
+--------------------
+Rede social */
+
+.social {
+    margin: 50px 0;
+}
+
+.valores{
+    display: flex;
+    justify-content: center;
+}
+.social .caixas, .caixa {
+    display: flex;
+}
+
+.caixa {
+    flex-direction: column;
+    align-items: center;
+    margin: 0 15px;
+}
+
+.caixa h4 {
+    margin: 15px 0;
+    color: #e6005a;
+}
+
+.caixa p {
+    text-align: center;
+    color: #000000; 
+    /* color: black; */
+}
+
+.caixa img {
+    width: 170px;
+}
+/* 
+--------------------
+Rodapé */
+
+
+.footer {
+    padding: 45px 0;
+    background-color: #b7bcbc;
+}
+
+.footer .container {
+    display: flex;
+    justify-content: center;
+}
+
+.footer p {
+    color: black;
 }

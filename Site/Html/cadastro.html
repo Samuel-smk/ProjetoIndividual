@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="Pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Css/cadastroLogin.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="containerHeader">
+            <h1>Health fit</h1>
+            <div class="navbar">
+
+                <ul class="menu">
+                    <li>Inicio</li>
+                    <li>|</li>
+                    <li>Blog</li>
+                    <li>|</li>
+                    <li>Sobre nós</li>
+                </ul>
+                <div class="button">
+                    <button class="login" >Login</button>
+                    <button class="cadastro" onclick="cadastrar()">Cadastrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </header>
+
+    <div class="banner">
+        <div class="container">
+            <div class="caixa-formularioEsquerda">
+                <img src="..//Img/logoBranco.svg" class="logo">
+                <h1>Health Fit</h1>
+                <img src="..//Img/Maromba.gif" class="maromba">
+            </div>
+            <div class="caixa-formularioDireita">
+                <div class="caixaLogo">
+                    <img src="..//Img/logo.svg" class="logo">
+                </div>
+                <div class="opcao">
+                    <button onclick="cadastrar()">Cadastro</button>
+                    <button onclick="login()">Logar</button>
+                </div>
+                <div class="campos">
+                    <div class="campo">
+                        
+                        <input  id="nome" placeholder="Nome">
+                    </div>
+                    <div class="campo">
+                        
+                        <input type="email" id="email" placeholder="Email">
+                    </div>
+                    <div class="campo">
+                        
+                        <input type="password" id="password" placeholder="Senha">
+                    </div>
+                    <div class="campo">
+                        <input type="password" id="confirma_senha" placeholder="Confirme sua senha">
+                    </div>
+                    <div class="campo">
+                        <button onclick="cadastrar()">Cadastrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="container">
+            <p>Samuel Mariano André - &copy; Copyright</p>
+        </div>
+    </div>
+</body>
+</html>

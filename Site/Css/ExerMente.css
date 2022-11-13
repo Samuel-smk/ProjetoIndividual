@@ -1,0 +1,37 @@
+.container2{
+    background-color: #eee;
+    margin: 100px;
+    margin-left: 500px;
+    margin-right: 500px;
+    height: 100vh;
+    display: flex;
+    box-shadow:8px 9px 43px -21px rgba(0,0,0,0.7)
+}
+
+.folha{
+   height: 100%;
+   
+}
+
+.container2 .folha .titulo{
+    margin-top: 30px;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    
+}
+
+.container2 .folha .titulo h1{
+    display: flex;
+    justify-content: center;
+}
+.container2 .folha .texto{
+    display: flex;
+    margin-left: 125px;
+    margin-right: 125px;
+    text-align: justify;
+    align-items: center;
+    height: 80%;
+    font-size: 20px;
+    
+}
