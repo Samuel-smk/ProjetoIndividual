@@ -1,17 +1,147 @@
+
+*{
+    padding: 0%;
+    box-sizing: border-box;
+    border: 0;
+    margin: 0;
+    font-family: sans-serif;
+    
+}
+/* resetar css
+
+------------------------ 
+
+Inicio do Header*/
+header {
+    padding: 10px 0;
+    border-bottom: 1px solid black;
+    background-color: white;
+    display: flex;
+    
+    
+}
+
+header .containerHeader {
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+header .containerHeader .logo{
+display: flex;
+width: 40%;
+}
+header .containerHeader h1 {
+    color: black;
+    font-weight: 20px;
+    margin-left: 10px;
+    font-size: 25px;
+    
+    
+}
+
+header .containerHeader .navbar{
+    display: flex;
+    width: 90%;
+    justify-content: center;
+    
+}
+header .containerHeader .navbar .menu{
+    display: flex;
+    list-style: none;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+header .containerHeader .navbar .menu li{
+    display: inline-block;
+    margin: 10px;
+    list-style: none ;
+    
+}
+header .containerHeader .navbar .button{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 10px;
+    
+}
+
+header .containerHeader .navbar .button .login, .cadastro{
+    width: 5vw;
+    height: 4vh;
+    border-radius: 10px;
+    border: 2px solid #5acbda;
+}
+
+
+header .containerHeader .navbar .button .login{
+    background-color:#fff;
+    transition: 0.5s;
+    margin-right: 15px;
+}
+
+.login:hover{
+    background-color:rgb(238, 238, 238);
+    transition: 0.5s;
+    cursor:pointer;
+}
+
+.cadastro{
+    color: black;
+    background-color: white;
+    cursor:pointer;
+    transition: 0.5s;
+}
+.cadastro:hover{
+    background-color: #42baca;
+    transition: 0.5s;
+}
+/* 
+Header
+--------------------
+footer 
+*/
+
+.footer {
+    padding: 45px 0;
+    background-color: #b7bcbc;
+    border-top: 1px solid black;
+}
+
+.footer .container {
+    display: flex;
+    justify-content: center;
+}
+
+.footer p {
+    color:black;
+}
+
+/*
+footer 
+--------------------
+Blog
+*/
 .container2{
     background-color: #eee;
     display: flex;
     height: 120vh;
     box-shadow:8px 9px 43px -21px rgba(0,0,0,0.7);
     justify-content: center;
+    margin: 10% 10%;
 }
 
-.folha{
+.container2 .back .folha {
+    display: flex;
    justify-content: center;
-   width: 80%;
-   height: 100%;
-   display: flex;
-   flex-direction: column;
+   align-items: center;
+   flex-direction: column;  
+   width: 100%;
+   height: 120%;
+   text-align: justify;
+   padding: 0 10%;
 }
 
 .container2 .folha .titulo{
@@ -28,8 +158,10 @@
 }
 .container2 .folha .texto{
     display: flex;
-  
+    text-align: justify;
     height: 80%;
     font-size: 20px;
-    
+    justify-content: center;
+    margin: 0 10%;
+    margin-top: 20px;
 }

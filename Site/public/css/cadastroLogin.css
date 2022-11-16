@@ -34,16 +34,16 @@ width: 20%;
 header .containerHeader h1 {
     color: black;
     font-weight: 400;
-    justify-content: flex-start;
+    
     margin-left: 10px;
-    width: 100%;
+    width: 20%;
     
 }
 
 header .containerHeader .navbar{
     display: flex;
     width: 100%;
-    
+    justify-content: center;
     
 }
 header .containerHeader .navbar .menu{
@@ -102,9 +102,7 @@ header .containerHeader .navbar .button .login{
 Header
 --------------------
 footer 
-*/
-
-.footer {
+*/.footer {
     padding: 45px 0;
     background-color: #b7bcbc;
     border-top: 1px solid black;
@@ -122,7 +120,7 @@ footer
 /*
 footer 
 --------------------
-Caixa formulario
+Cadastro
 */
 .banner{
     display: flex;

@@ -106,11 +106,12 @@ Banner */
     background-size: 100%;
     background-color: #eee;
     height: 90vh;
-    padding: 200px 0;
+    
 }
 
 .banner .container {
-    height: 350px;
+    backdrop-filter: blur(10px);
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
