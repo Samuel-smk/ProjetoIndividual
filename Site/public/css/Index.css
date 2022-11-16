@@ -27,12 +27,16 @@ header .containerHeader {
     display: flex;
     align-items: center;
 }
+header .containerHeader .logo{
+display: flex;
+width: 20%;
+}
 header .containerHeader h1 {
     color: black;
     font-weight: 400;
     justify-content: flex-start;
     margin-left: 10px;
-    width: 10%;
+    width: 100%;
     
 }
 
@@ -45,7 +49,7 @@ header .containerHeader .navbar{
 header .containerHeader .navbar .menu{
     display: flex;
     list-style: none;
-    width: 100%;
+    width: 80%;
     justify-content: center;
     align-items: center;
 }
@@ -59,8 +63,9 @@ header .containerHeader .navbar .menu li{
 header .containerHeader .navbar .button{
     display: flex;
     justify-content: flex-end;
-    align-items: flex-end;
+    align-items: center;
     margin-right: 10px;
+    width: 20%;
 }
 
 header .containerHeader .navbar .button .login, .cadastro{
@@ -97,7 +102,7 @@ header .containerHeader .navbar .button .login{
 --------------------
 Banner */
 .banner {
-    background-image: url("../Img/Academia.jpg");
+    background-image: url("../assets/Img/Academia.jpg");
     background-size: 100%;
     background-color: #eee;
     height: 90vh;
