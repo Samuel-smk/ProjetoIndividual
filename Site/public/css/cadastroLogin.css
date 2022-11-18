@@ -12,6 +12,7 @@
 ------------------------ 
 
 Inicio do Header*/
+
 header {
     padding: 10px 0;
     border-bottom: 1px solid black;
@@ -19,6 +20,10 @@ header {
     display: flex;
     
     
+}
+a{
+    text-decoration: none;
+    color: #444848;
 }
 
 header .containerHeader {
@@ -29,20 +34,20 @@ header .containerHeader {
 }
 header .containerHeader .logo{
 display: flex;
-width: 20%;
+
 }
 header .containerHeader h1 {
     color: black;
     font-weight: 400;
-    
+    font-size: 30px;
     margin-left: 10px;
-    width: 20%;
+    
     
 }
 
 header .containerHeader .navbar{
     display: flex;
-    width: 100%;
+    width: 90%;
     justify-content: center;
     
 }
@@ -59,6 +64,10 @@ header .containerHeader .navbar .menu li{
     margin: 10px;
     list-style: none ;
     
+}
+.liStyle{
+    border-radius: 3px;
+    border-bottom: 2px solid black;
 }
 header .containerHeader .navbar .button{
     display: flex;
@@ -116,7 +125,6 @@ footer
 .footer p {
     color:black;
 }
-
 /*
 footer 
 --------------------
