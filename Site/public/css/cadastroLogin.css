@@ -58,6 +58,7 @@ header .containerHeader .navbar .menu{
     width: 80%;
     justify-content: center;
     align-items: center;
+    margin-left: 10%;
 }
 
 header .containerHeader .navbar .menu li{
@@ -82,7 +83,7 @@ header .containerHeader .navbar .button .login, .cadastro{
     width: 5vw;
     height: 4vh;
     border-radius: 10px;
-    border: 2px solid #5acbda;
+    border-bottom: 2px solid #5acbda;
 }
 
 

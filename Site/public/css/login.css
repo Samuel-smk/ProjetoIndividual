@@ -54,6 +54,7 @@ header .containerHeader .navbar .menu{
     display: flex;
     list-style: none;
     width: 80%;
+    margin-left: 10%;
     justify-content: center;
     align-items: center;
 }
@@ -80,7 +81,7 @@ header .containerHeader .navbar .button .login, .cadastro{
     width: 5vw;
     height: 4vh;
     border-radius: 10px;
-    border: 2px solid #5acbda;
+    border-bottom: 2px solid #5acbda;
 }
 
 

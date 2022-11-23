@@ -15,11 +15,10 @@ Inicio do Header*/
 header {
     padding: 10px 0;
     border-bottom: 1px solid black;
+    background-color: white;
     background: rgb(238,238,238);
-background: linear-gradient(90deg, rgba(238,238,238,1) 5%, rgba(201,250,250,1) 50%, rgba(231,238,239,1) 95%);   
+    background: linear-gradient(90deg, rgba(238,238,238,1) 5%, rgba(201,250,250,1) 50%, rgba(231,238,239,1) 95%);
     display: flex;
-    
-    
 }
 a{
     text-decoration: none;
@@ -34,21 +33,21 @@ header .containerHeader {
 }
 header .containerHeader .logo{
 display: flex;
-width: 20%;
+
 }
 header .containerHeader h1 {
     color: black;
     font-weight: 400;
-    justify-content: flex-start;
+    font-size: 30px;
     margin-left: 10px;
-    width: 100%;
+    
     
 }
 
 header .containerHeader .navbar{
     display: flex;
-    width: 100%;
-    
+    width: 90%;
+    justify-content: center;
     
 }
 header .containerHeader .navbar .menu{
@@ -57,12 +56,14 @@ header .containerHeader .navbar .menu{
     width: 80%;
     justify-content: center;
     align-items: center;
+    margin-left: 10%;
 }
 
 header .containerHeader .navbar .menu li{
     display: inline-block;
     margin: 10px;
     list-style: none ;
+    
 }
 .liStyle{
     border-radius: 3px;
@@ -141,7 +142,7 @@ Blog */
 .areaBlog{
     padding: 50px;
     background: rgb(238,238,238);
-background: linear-gradient(90deg, rgba(238,238,238,1) 5%, rgba(201,250,250,1) 50%, rgba(231,238,239,1) 95%);
+    background: linear-gradient(90deg, rgba(238,238,238,1) 5%, rgba(201,250,250,1) 50%, rgba(231,238,239,1) 95%);
 }
 
 .areaBlog .blog{
