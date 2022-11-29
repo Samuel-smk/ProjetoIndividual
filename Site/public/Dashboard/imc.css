@@ -147,7 +147,7 @@ Cadastro
     box-shadow: -5px -1px 40px -19px rgba(0,0,0,0.75);
     display: flex;
     width: 50%;
-    height: 50%;
+    
     align-items: center;
     justify-content: center;
     background-color: #eee;
@@ -228,4 +228,9 @@ Cadastro
     align-items: center;
     margin-top: 10%;
     font-size: 30px;
+    flex-direction: column;
+    margin-bottom: 10%;
+}
+#div_resultado b{
+    font-size: 20px;
 }

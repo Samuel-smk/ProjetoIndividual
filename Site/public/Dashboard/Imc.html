@@ -10,28 +10,30 @@
 <body>
     <header>
         <div class="containerHeader">
-            <a href="..//index.html">
+            <a href="../index.html">
                 <h1>Health fit</h1>
             </a>
             <div class="navbar">
 
                 <ul class="menu">
-                    <a href="..//index.html">
+                    <a href="../index.html">
                         <li class="liStyle">Inicio</li>
                     </a>
                     <li >|</li>
-                    <a href="..//index.html">
+                    <a href="../index.html">
                         <li class="liStyle">Blog</li>
                     </a>
                     <li >|</li>
-                    <a href="..//Dashboard/Imc.html">
+                    <a href="Dashboard/Imc.html">
                         <li class="liStyle">Calcule o Imc</li>
                     </a>
                     <li>|</li>
                 </ul>
+            
                 <div class="button">
                     <button class="login" onclick=""><a href="../login.html">Login</a></button>
-                    <button class="cadastro" onclick=""><a href="..//cadastro.html">Cadastrar</a></button>
+                    <button class="cadastro" onclick=""><a href="../cadastro.html">Cadastrar</a></button>
+                    <button class="sair" onclick=""><a href="../login.html" id="aparecer">Sair</a></button>
                 </div>
             </div>
         </div>
@@ -78,11 +80,96 @@
 
 
 <script>
-    function calcular(){
+
+
+    var dtNascimento = idade_input.value
         var alt = Number(altura_input.value)
         var peso = Number(peso_input.value)
         var resultado = peso / (alt * alt)
 
-        div_resultado.innerHTML = `${resultado.toFixed(1)}`
+    function calcular(){
+        dtNascimento = idade_input.value
+        alt = Number(altura_input.value)
+        peso = Number(peso_input.value)
+        resultado = peso / (alt * alt)
+        
+        div_resultado.innerHTML = ``
+
+        if(resultado < 18.6){
+            div_resultado.innerHTML = `${resultado.toFixed(1)} <br> abaixo do peso`
+        }else if(resultado >= 18.6 && resultado <= 24.9){
+            div_resultado.innerHTML = `${resultado.toFixed(1)} <br> <b> Parabéns, peso ideal </b>`
+        }else if(resultado >= 25.0 && resultado <= 29.9){
+            div_resultado.innerHTML = `${resultado.toFixed(1)} <br> <b> Levemente acima do peso</b>`
+        }else if(resultado >=30.0 && resultado <=34.9){
+            div_resultado.innerHTML = `${resultado.toFixed(1)} <br> <span style= "color:red"><b>Cuidado! Obesidade grau 1</b> </span>`
+        }else if(resultado >= 35.0 && resultado <= 39.9){
+            div_resultado.innerHTML = `${resultado.toFixed(1)} <br> <span style= "color:red"><b> CUIDADO! Obesidade grau 2</b> </span>`
+        }else if(resultado >= 40){
+            div_resultado.innerHTML = `${resultado.toFixed(1)} <<br> <span style= "color:red"><b> PERIGO! Obesidade grau 2</b> </span>`
+        }
+
+        cadastrarImc()
     }
+
+
+    function cadastrarImc() {
+    
+
+        //Recupere o valor da nova input pelo nome do id
+        // Agora vá para o método fetch logo abaixo
+        dtNascimento = idade_input.value
+        alt = Number(altura_input.value)
+        peso = Number(peso_input.value)
+        resultado = peso / (alt * alt)
+
+        if (dtNascimento == "" || alt == "" || peso == "") {
+            //cardErro.style.display = "block"
+            //mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+
+        }
+        else {
+            //etInterval(sumirMensagem, 5000)
+            
+            // Enviando o valor da nova input
+            fetch("/usuarios/cadastrarImc", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                // crie um atributo que recebe o valor recuperado aqui
+                // Agora vá para o arquivo routes/usuario.js
+                dtNascimentoServer: dtNascimento,
+                altServer: alt,
+                pesoServer: peso,
+                resutadoServer: resultado,
+                idUsua
+            })
+        }).then(function (resposta) {
+
+            console.log("resposta: ", resposta);
+
+            if (resposta.ok) {
+                cardErro.style.display = "block";
+
+                mensagem_erro.innerHTML = "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
+
+                setTimeout(() => {
+                    window.location = "login.html";
+                }, "2000")
+                
+                limparFormulario();
+                finalizarAguardar();
+            } else {
+                throw ("Houve um erro ao tentar realizar o cadastro!");
+            }
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+            finalizarAguardar();
+        });
+        
+        return false;
+    }
+}
 </script>

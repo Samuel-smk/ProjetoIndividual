@@ -25,12 +25,11 @@
                         <li class="liStyle">Blog</li>
                     </a>
                     <li >|</li>
-                    <a href="../public/Dashboard/Imc.html">
-                        <li class="liStyle">Calcule o Imc</li>
+                    <a href="Dashboard/imc.html">
+                        <li class="liStyle" id="sumir">Calcule o Imc</li>
                     </a>
-                    <li>|</li>
                 </ul>
-                <div class="button">
+                <div class="button" id="button">
                     <button class="login" onclick=""><a href="login.html">Login</a></button>
                     <button class="cadastro" onclick=""><a href="cadastro.html">Cadastrar</a></button>
                 </div>
@@ -103,3 +102,17 @@
 
 </body>
 </html>
+
+
+<script>
+    if(sessionStorage.NOME_USUARIO != null || sessionStorage.NOME_USUARIO != undefined){
+       
+        button.style.display = "none";
+        document.getElementsByid("sumir").style.display = "block";
+    }else{
+        button.style.display = "block";
+        document.getElementsByid("sumir").style.display = "none";
+    }
+
+    
+</script>

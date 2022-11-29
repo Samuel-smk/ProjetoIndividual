@@ -24,10 +24,9 @@
                         <li class="liStyle">Blog</li>
                     </a>
                     <li >|</li>
-                    <a href="/public/Dashboard/Imc.html">
-                        <li class="liStyle">Calcule o Imc</li>
+                    <a href="Dashboard/imc.html">
+                        <li class="liStyle" id="simuir">Calcule o Imc</li>
                     </a>
-                    <li>|</li>
                 </ul>
                 <div class="button">
                     <button class="login" onclick=""><a href="login.html">Login</a></button>
@@ -84,7 +83,6 @@
 
 
     function entrar() {
-        aguardar();
 
         var emailVar = email_input.value;
         var senhaVar = senha_input.value;
@@ -92,11 +90,6 @@
         if (emailVar == "" || senhaVar == "") {
             cardErro.style.display = "block"
             mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
-            finalizarAguardar();
-            return false;
-        }
-        else {
-            setInterval(sumirMensagem, 5000)
         }
 
         console.log("FORM LOGIN: ", emailVar);
@@ -123,10 +116,10 @@
 
                     sessionStorage.EMAIL_USUARIO = json.email;
                     sessionStorage.NOME_USUARIO = json.nome;
-                    sessionStorage.ID_USUARIO = json.id;
+                    sessionStorage.ID_USUARIO = json.idUsuario;
 
                     setTimeout(function () {
-                        window.location = "./dashboard/cards.html";
+                        window.location = "./Dashboard/Imc.html";
                     }, 1000); // apenas para exibir o loading
 
                 });
@@ -146,10 +139,6 @@
         })
 
         return false;
-    }
-
-    function sumirMensagem() {
-        cardErro.style.display = "none"
     }
 
 </script>

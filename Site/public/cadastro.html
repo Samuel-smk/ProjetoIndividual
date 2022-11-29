@@ -24,10 +24,9 @@
                         <li class="liStyle">Blog</li>
                     </a>
                     <li >|</li>
-                    <a href="/public/Dashboard/Imc.html">
-                        <li class="liStyle">Calcule o Imc</li>
+                    <a href="Dashboard/imc.html">
+                        <li class="liStyle" id="simuir">Calcule o Imc</li>
                     </a>
-                    <li>|</li>
                 </ul>
                 <div class="button">
                     <button class="login" onclick=""><a href="login.html">Login</a></button>
@@ -87,7 +86,7 @@
 
 <script>
     function cadastrar() {
-        aguardar();
+    
 
         //Recupere o valor da nova input pelo nome do id
         // Agora vá para o método fetch logo abaixo
@@ -100,8 +99,6 @@
             cardErro.style.display = "block"
             mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
 
-            finalizarAguardar();
-            return false;
         }
         else {
             setInterval(sumirMensagem, 5000)
@@ -146,8 +143,5 @@
         return false;
     }
 
-    function sumirMensagem() {
-        cardErro.style.display = "none"
-    }
 
 </script>
