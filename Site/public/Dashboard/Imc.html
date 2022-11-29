@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Dashboard/imc.css">
+    <title>Calcule o imc</title>
+</head>
+<body>
+    <header>
+        <div class="containerHeader">
+            <a href="..//index.html">
+                <h1>Health fit</h1>
+            </a>
+            <div class="navbar">
+
+                <ul class="menu">
+                    <a href="..//index.html">
+                        <li class="liStyle">Inicio</li>
+                    </a>
+                    <li >|</li>
+                    <a href="..//index.html">
+                        <li class="liStyle">Blog</li>
+                    </a>
+                    <li >|</li>
+                    <a href="..//Dashboard/Imc.html">
+                        <li class="liStyle">Calcule o Imc</li>
+                    </a>
+                    <li>|</li>
+                </ul>
+                <div class="button">
+                    <button class="login" onclick=""><a href="../login.html">Login</a></button>
+                    <button class="cadastro" onclick=""><a href="..//cadastro.html">Cadastrar</a></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </header>
+    <div class="fundo">
+        <div class="container">
+            <div class="calculeImc">
+                <div class="caixaLogo">
+                    
+                </div>
+                <div class="opcao">
+                    <h1>Calcule seu IMC</h1> 
+                </div>
+                <div class="campos">
+                    <div class="campo">
+                        
+                        <input type="date" id="idade_input" placeholder="Insira sua data de nascimento">
+                    </div>
+                    <div class="campo">
+                        
+                        <input  id="altura_input" placeholder="Insira sua Altura">
+                    </div>
+                    <div class="campo">
+                        
+                        <input  id="peso_input" placeholder="Insira seu peso">
+                    </div>
+                    <div class="campo">
+                        <button onclick="calcular()">Calcular</button>
+                    </div>
+                    <div id="div_resultado"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="container">
+            <p>Samuel Mariano André - &copy; Copyright</p>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+<script>
+    function calcular(){
+        var alt = Number(altura_input.value)
+        var peso = Number(peso_input.value)
+        var resultado = peso / (alt * alt)
+
+        div_resultado.innerHTML = `${resultado.toFixed(1)}`
+    }
+</script>

@@ -1,0 +1,231 @@
+*{
+    padding: 0%;
+    box-sizing: border-box;
+    border: 0;
+    margin: 0;
+    font-family: sans-serif;
+    
+}
+/* resetar css
+
+------------------------ 
+
+Inicio do Header*/
+
+header {
+    padding: 10px 0;
+    border-bottom: 1px solid black;
+    background-color: white;
+    display: flex;
+    background: rgb(238,238,238);
+    background: linear-gradient(90deg, rgba(238,238,238,1) 5%, rgba(201,250,250,1) 50%, rgba(231,238,239,1) 95%);
+    
+}
+a{
+    text-decoration: none;
+    color: #444848;
+}
+
+header .containerHeader {
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+header .containerHeader .logo{
+display: flex;
+
+}
+header .containerHeader h1 {
+    color: black;
+    font-weight: 400;
+    font-size: 30px;
+    margin-left: 10px;
+    
+    
+}
+
+header .containerHeader .navbar{
+    display: flex;
+    width: 90%;
+    justify-content: center;
+    
+}
+header .containerHeader .navbar .menu{
+    display: flex;
+    list-style: none;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10%;
+}
+
+header .containerHeader .navbar .menu li{
+    display: inline-block;
+    margin: 10px;
+    list-style: none ;
+    
+}
+.liStyle{
+    border-radius: 3px;
+    border-bottom: 2px solid black;
+}
+header .containerHeader .navbar .button{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 10px;
+    width: 20%;
+}
+
+header .containerHeader .navbar .button .login, .cadastro{
+    width: 5vw;
+    height: 4vh;
+    border-radius: 10px;
+    border-bottom: 2px solid #5acbda;
+}
+
+
+header .containerHeader .navbar .button .login{
+    background-color:#fff;
+    transition: 0.5s;
+    margin-right: 15px;
+}
+
+.login:hover{
+    background-color:rgb(238, 238, 238);
+    transition: 0.5s;
+    cursor:pointer;
+}
+
+.cadastro{
+    color: black;
+    background-color: white;
+    cursor:pointer;
+    transition: 0.5s;
+}
+.cadastro:hover{
+    background-color: #42baca;
+    transition: 0.5s;
+}
+/* 
+Header
+--------------------
+footer 
+*/.footer {
+    padding: 45px 0;
+    background: rgb(238,238,238);
+    background: linear-gradient(90deg, rgba(238,238,238,1) 5%, rgba(201,250,250,1) 50%, rgba(231,238,239,1) 95%);
+}
+
+.footer .container {
+    display: flex;
+    justify-content: center;
+}
+
+.footer p {
+    color:black;
+}
+/*
+footer 
+--------------------
+Cadastro
+*/
+
+.fundo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 110vh;
+    background: rgb(238,238,238);
+    background: linear-gradient(90deg, rgba(238,238,238,1) 5%, rgba(201,250,250,1) 50%, rgba(231,238,239,1) 95%);
+}
+.fundo .container{
+    -webkit-box-shadow: -5px -1px 40px -19px rgba(0,0,0,0.75);
+    -moz-box-shadow: -5px -1px 40px -19px rgba(0,0,0,0.75);
+    box-shadow: -5px -1px 40px -19px rgba(0,0,0,0.75);
+    display: flex;
+    width: 50%;
+    height: 50%;
+    align-items: center;
+    justify-content: center;
+    background-color: #eee;
+    border-radius: 20px;
+    
+}
+.fundo .container .calculeImc{
+    background-color: #eee;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    
+}
+.fundo .container .calculeImc .caixaLogo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 30px;
+    
+}
+.fundo .container .calculeImc .caixaLogo .logo{
+    width: 100px;
+    height: 100px;
+}
+.fundo .container .calculeImc .opcao{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    height: 50px;
+}
+.fundo .container .calculeImc .opcao h1{
+    border: none;
+    background-color: transparent;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 3px solid black;
+    font-size: 20px;
+    cursor: pointer;
+}
+.fundo .container .calculeImc .campos{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.fundo .container .calculeImc .campos .campo{
+    margin-top: 25px;
+    width: 80%;
+}
+.fundo .container .calculeImc .campos .campo input{
+    background-color: whitesmoke;
+    width: 100%;
+    height: 120%;
+    font-size: 20px;
+    margin-top: 10px;
+    border-radius: 10px;
+    
+    
+}
+.fundo .container .calculeImc .campos .campo button{
+    background-color: rgb(152, 226, 212);
+    color: black;
+    width: 100%;
+    height: 120%;
+    font-size: 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    
+}
+ #div_resultado{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+    font-size: 30px;
+}
