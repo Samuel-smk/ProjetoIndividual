@@ -17,7 +17,7 @@ router.post("/cadastrar", function (req, res) {
 })
 
 router.post("/cadastrarImc", function (req, res) {
-    usuarioController.cadastrar(req, res);
+    usuarioController.cadastrarImc(req, res);
 })
 
 router.post("/autenticar", function (req, res) {

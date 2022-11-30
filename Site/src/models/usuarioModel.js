@@ -32,13 +32,13 @@ function cadastrar(nome, email, senha) {
 }
 
 
-function cadastrarImc(dtNascimento, peso, alt, resultado) {
-    console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function cadastrarImc():", dtNascimento, peso, alt, resultado);
+function cadastrarImc(fkUsuario,dtNasc, peso, alt, resultado) {
+    console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function cadastrarImc():",fkUsuario, dtNasc, peso, alt, resultado);
     
     // Insira exatamente a query do banco aqui, lembrando da nomenclatura exata nos valores
     //  e na ordem de inserção dos dados.
     var instrucao = `
-        INSERT INTO imc (dtNascimento, peso, alt, resultado) VALUES ('${dtNascimento}', '${peso}', '${alt}', '${resultado}');
+        INSERT INTO imc  VALUES (1, ${fkUsuario},'${dtNasc}', ${peso}, ${alt}, ${resultado});
     `;
     console.log("Executando a instrução SQL: \n" + instrucao);
     return database.executar(instrucao);

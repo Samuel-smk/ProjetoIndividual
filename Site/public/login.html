@@ -25,12 +25,15 @@
                     </a>
                     <li >|</li>
                     <a href="Dashboard/imc.html">
-                        <li class="liStyle" id="simuir">Calcule o Imc</li>
+                        <li class="liStyle" id="simuir" style="display: none;">Calcule o Imc</li>
                     </a>
                 </ul>
                 <div class="button">
                     <button class="login" onclick=""><a href="login.html">Login</a></button>
                     <button class="cadastro" onclick=""><a href="cadastro.html">Cadastrar</a></button>
+                    <div style="display: none;" id="aparecer">
+                        <button class="sair" onclick=""><a href="login.html">Sair</a></button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -40,13 +43,13 @@
     <div class="fundo">
         <div class="container">
             <div class="caixa-formularioEsquerda">
-                <img src="../assets/Img/logo.svg" class="logo">
+                <img src="assets/Img/logo.svg" class="logo">
                 <h1>Health Fit</h1>
-                <img src="" class="maromba">
+                <img src="assets/Img/magro.png" class="maromba">
             </div>
             <div class="caixa-formularioDireita">
                 <div class="caixaLogo">
-                    <img src="../assets/Img/logo.svg" class="logo">
+                    <img src="assets/Img/logo.svg" class="logo">
                 </div>
                 <div class="opcao">
                     <button onclick="">Login</button>
@@ -130,7 +133,6 @@
 
                 resposta.text().then(texto => {
                     console.error(texto);
-                    finalizarAguardar(texto);
                 });
             }
 

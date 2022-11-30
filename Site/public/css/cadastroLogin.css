@@ -109,6 +109,21 @@ header .containerHeader .navbar .button .login{
     background-color: #42baca;
     transition: 0.5s;
 }
+.sair{
+    margin-left: 10px;
+    color: black;
+    background-color: white;
+    cursor:pointer;
+    width: 5vw;
+    height: 4vh;
+    border-radius: 10px;
+    border-bottom: 2px solid #5acbda;
+    transition: 0.5s;
+}
+.sair:hover{
+    background-color: #42baca;
+    transition: 0.5s;
+}
 /* 
 Header
 --------------------

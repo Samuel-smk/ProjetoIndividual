@@ -33,7 +33,7 @@
                 <div class="button">
                     <button class="login" onclick=""><a href="../login.html">Login</a></button>
                     <button class="cadastro" onclick=""><a href="../cadastro.html">Cadastrar</a></button>
-                    <button class="sair" onclick=""><a href="../login.html" id="aparecer">Sair</a></button>
+                    <button class="sair" onclick=""><a href="../login.htm" id="aparecer">Sair</a></button>
                 </div>
             </div>
         </div>
@@ -82,13 +82,13 @@
 <script>
 
 
-    var dtNascimento = idade_input.value
+    var dtNasc = idade_input.value
         var alt = Number(altura_input.value)
         var peso = Number(peso_input.value)
         var resultado = peso / (alt * alt)
 
     function calcular(){
-        dtNascimento = idade_input.value
+        dtNasc = idade_input.value
         alt = Number(altura_input.value)
         peso = Number(peso_input.value)
         resultado = peso / (alt * alt)
@@ -118,12 +118,12 @@
 
         //Recupere o valor da nova input pelo nome do id
         // Agora vá para o método fetch logo abaixo
-        dtNascimento = idade_input.value
+        dtNasc = idade_input.value
         alt = Number(altura_input.value)
         peso = Number(peso_input.value)
         resultado = peso / (alt * alt)
 
-        if (dtNascimento == "" || alt == "" || peso == "") {
+        if (dtNasc == "" || alt == "" || peso == "") {
             //cardErro.style.display = "block"
             //mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
 
@@ -140,11 +140,11 @@
             body: JSON.stringify({
                 // crie um atributo que recebe o valor recuperado aqui
                 // Agora vá para o arquivo routes/usuario.js
-                dtNascimentoServer: dtNascimento,
+                dtNascServer: dtNasc,
                 altServer: alt,
                 pesoServer: peso,
                 resutadoServer: resultado,
-                idUsua
+                fkUsuarioServer: sessionStorage.ID_USUARIO
             })
         }).then(function (resposta) {
 
@@ -156,17 +156,16 @@
                 mensagem_erro.innerHTML = "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
 
                 setTimeout(() => {
-                    window.location = "login.html";
+                    window.location = "Imc.html"
                 }, "2000")
                 
                 limparFormulario();
-                finalizarAguardar();
             } else {
+                
                 throw ("Houve um erro ao tentar realizar o cadastro!");
             }
         }).catch(function (resposta) {
             console.log(`#ERRO: ${resposta}`);
-            finalizarAguardar();
         });
         
         return false;

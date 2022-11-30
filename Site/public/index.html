@@ -26,12 +26,15 @@
                     </a>
                     <li >|</li>
                     <a href="Dashboard/imc.html">
-                        <li class="liStyle" id="sumir">Calcule o Imc</li>
+                        <li class="liStyle" id="simuir" style="display: none;">Calcule o Imc</li>
                     </a>
                 </ul>
-                <div class="button" id="button">
+                <div class="button">
                     <button class="login" onclick=""><a href="login.html">Login</a></button>
                     <button class="cadastro" onclick=""><a href="cadastro.html">Cadastrar</a></button>
+                    <div style="display: none;" id="aparecer">
+                        <button class="sair" onclick=""><a href="login.html">Sair</a></button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -109,11 +112,10 @@
 <script>
     if(sessionStorage.NOME_USUARIO != null || sessionStorage.NOME_USUARIO != undefined){
        
-        button.style.display = "none";
+        document.getElementsByClassName("login").style.display = "none";
+        document.getElementsByClassName("cadastro").style.display = "none";
         document.getElementsByid("sumir").style.display = "block";
-    }else{
-        button.style.display = "block";
-        document.getElementsByid("sumir").style.display = "none";
+        document.getElementsByid("aparecer").style.display = "block";
     }
 
     

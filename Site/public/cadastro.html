@@ -25,12 +25,15 @@
                     </a>
                     <li >|</li>
                     <a href="Dashboard/imc.html">
-                        <li class="liStyle" id="simuir">Calcule o Imc</li>
+                        <li class="liStyle" id="simuir" style="display: none;">Calcule o Imc</li>
                     </a>
                 </ul>
                 <div class="button">
                     <button class="login" onclick=""><a href="login.html">Login</a></button>
                     <button class="cadastro" onclick=""><a href="cadastro.html">Cadastrar</a></button>
+                    <div style="display: none;" id="aparecer">
+                        <button class="sair" onclick=""><a href="login.html">Sair</a></button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -42,7 +45,7 @@
             <div class="caixa-formularioEsquerda">
                 <img src="assets/Img/logo.svg" class="logo">
                 <h1>Health Fit</h1>
-                <img src="assets/Img/Maromba.gif" class="maromba">
+                <img src="assets/Img/forte.png" class="maromba">
             </div>
             <div class="caixa-formularioDireita">
                 <div class="caixaLogo">
@@ -100,9 +103,7 @@
             mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
 
         }
-        else {
-            setInterval(sumirMensagem, 5000)
-        }
+        
 
         // Enviando o valor da nova input
         fetch("/usuarios/cadastrar", {
@@ -131,13 +132,11 @@
                 }, "2000")
                 
                 limparFormulario();
-                finalizarAguardar();
             } else {
                 throw ("Houve um erro ao tentar realizar o cadastro!");
             }
         }).catch(function (resposta) {
             console.log(`#ERRO: ${resposta}`);
-            finalizarAguardar();
         });
 
         return false;
