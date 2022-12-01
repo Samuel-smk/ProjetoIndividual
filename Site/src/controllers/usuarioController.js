@@ -98,24 +98,24 @@ function cadastrar(req, res) {
 function cadastrarImc(req, res) {
     // Crie uma variável que vá recuperar os valores do arquivo cadastro.html
     var dtNasc = req.body.dtNascServer;
-    var peso = req.body.pesoServer;
     var alt = req.body.altServer;
-    var resultado = req.body.resultadoServer;
+    var peso = req.body.pesoServer;
+    var result = req.body.resultServer;
     var fkUsuario = req.body.fkUsuarioServer;
 
     // Faça as validações dos valores
     if (dtNasc == undefined) {
         res.status(400).send("Sua data de nascimento está undefined!");
-    } else if (peso == undefined) {
-        res.status(400).send("Seu peso está undefined!");
     } else if (alt == undefined) {
         res.status(400).send("Sua altura está undefined!");
-    } else if (resultado == undefined) {
-        res.status(400).send("Sua resultado está undefined!");
+    } else if (peso == undefined) {
+        res.status(400).send("Seu peso está undefined!");
+    } else if (result == undefined) {
+        res.status(400).send("Seu resultado está undefined!");
     } else {
         
         // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
-        usuarioModel.cadastrarImc(fkUsuario, dtNasc, peso, alt, resultado)
+        usuarioModel.cadastrarImc(fkUsuario, dtNasc, alt, peso, result)
             .then(
                 function (resultado) {
                     res.json(resultado);

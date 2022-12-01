@@ -249,3 +249,7 @@ Cadastro
 #div_resultado b{
     font-size: 20px;
 }
+#div_pdf a{
+    font-size: 30px;
+    color: blue;
+}
