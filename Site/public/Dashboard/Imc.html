@@ -9,7 +9,7 @@
     <title>Calcule o imc</title>
 </head>
 
-<body onload="obterDadosGraficos()">
+<body onload="avgImc()">
     <header>
         <div class="containerHeader">
             <a href="../index.html">
@@ -68,12 +68,15 @@
                         <input id="peso_input" placeholder="Insira seu peso">
                     </div>
                     <div class="campo">
-                        <button onclick="calcular()">Calcular</button>
+                        <button onclick="calcular(), avgImc()">Calcular</button>
                     </div>
                     <div id="div_resultado" ></div>
                     <div id="div_pdf" style="display: none;"><a href="https://www.ufrpe.br/sites/www.ufrpe.br/files/Guia%20de%20orientacao%20para%20a%20pratica%20de%20exercicios%20em%20casa.pdf">Lista de Exercicio</a></div>
                 </div>
             </div>
+        </div>
+        <div class="containerAvg">
+            <div id="div_avgImc"> <b>Média de IMC dos usuarios:</b><span id="media"></span></div>
         </div>
     </div>
     <div class="footer">
@@ -88,7 +91,28 @@
 
 
 <script>
+    
     //window.onload = obterDadosGraficos();
+    async function avgImc(){
+        fetch("/usuarios/mediaImc", {
+                method: "GET",
+                headers: {
+                    "Content-Type": "application/json"
+                }
+        }).then(function(resultado){
+            resultado.json().then(function(respostaFormatada){
+                console.log(respostaFormatada[0].mediaImc)
+                if(resultado.ok){
+                    media.innerHTML = respostaFormatada[0].mediaImc
+                    console.log("resultado que esta vindo da api", resultado);
+                }
+            })
+        }).catch(function(resultado){
+            (erro) => console.error(erro)
+        });
+        return false;
+
+}
 
     var dtNasc = idade_input.value
     var alt = Number(altura_input.value)
@@ -160,6 +184,8 @@
                 console.log("resposta: ", resposta);
 
                 if (resposta.ok) {
+
+                    setTimeout(avgImc(), 1000)
 
                     // setTimeout(() => {
                     //     window.location = "Imc.html"

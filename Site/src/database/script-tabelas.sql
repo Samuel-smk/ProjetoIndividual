@@ -33,7 +33,7 @@ foreign key (fkUsuario) references usuario(idUsuario),
 primary key(idImc, fkUsuario),
 dtNasc date,
 altura decimal(3,2),
-peso decimal(4,2),
+peso float,
 resultado decimal(3,1)
 );
 select * from imc;
